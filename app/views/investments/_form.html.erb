@@ -1,0 +1,33 @@
+<%= form_for(@investment) do |f| %>
+  <% if @investment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@investment.errors.count, "error") %> prohibited this investment from being saved:</h2>
+
+      <ul>
+      <% @investment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.collection_select(:company_id,Company.all,:id,:symbol )%>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br />
+    <%= f.number_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :portfolio_id %><br />
+    <%= f.collection_select(:portfolio_id,Portfolio.all,:id,:id )%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

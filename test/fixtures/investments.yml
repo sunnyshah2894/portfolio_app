@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company_id: 1
+  cost: 1
+  quantity: 1
+  portfolio_id: 1
+
+two:
+  company_id: 1
+  cost: 1
+  quantity: 1
+  portfolio_id: 1
