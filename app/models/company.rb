@@ -1,4 +1,5 @@
 class Company < ActiveRecord::Base
+  has_many :investments
   validate :symbol_length_should_be_less
   def symbol_length_should_be_less
     if symbol.length <3 or symbol.length>4

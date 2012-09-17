@@ -16,7 +16,7 @@
     <td><%= investment.company_id %></td>
     <td><%= investment.cost %></td>
     <td><%= investment.quantity %></td>
-    <td><%= investment.portfolio_id %></td>
+    <td><%= investment.portfolio.description %></td>
     <td><%= link_to 'Show', investment %></td>
     <td><%= link_to 'Edit', edit_investment_path(investment) %></td>
     <td><%= link_to 'Destroy', investment, confirm: 'Are you sure?', method: :delete %></td>
